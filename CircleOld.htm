@@ -1,0 +1,127 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title></title>
+		<meta name="GENERATOR" content="Microsoft Visual Studio.NET 7.0">
+		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+		<style>
+		body {margin-right:5px;
+				margin-left:5px;
+				margin-top:5px;
+				margin-bottom:20;
+			color:rgb(64,131,242)
+		}
+		img {
+		border-top: rgb(186,235,254) 10px ridge;
+	border-right: rgb(186,235,254) 10px ridge;
+	border-left: rgb(186,235,254) 10px ridge;
+	border-bottom: rgb(186,235,254) 10px ridge;}
+}
+	a {color:rgb(64,131,242); text-decoration:none;}
+
+		</style>
+	</head>
+	<body style="FONT-SIZE: 12px; FONT-FAMILY: Georgia, 'Lucida Sans Unicode'; LETTER-SPACING: 4px; BACKGROUND-COLOR: rgb(242,255,255)">
+		<img style="VISIBILITY: hidden; POSITION: absolute;
+		filter:progid:DXImageTransform.Microsoft.RadialWipe(duration=2,wipeStyle=clock);" id="zPicture" alt="Circle">
+		<p align="center" id="titles" style="visibility: hidden; DISPLAY: inline; POSITION: absolute">
+			<a href="thepaths.htm">&lt;&nbsp;&nbsp;&nbsp;&nbsp;</a><span id="realtitle">Circle</span><a href="TunnelToFreedom.htm">&nbsp;&nbsp;&nbsp;&nbsp;&gt;</a>
+		</p>
+	</body>
+	<script language="javascript">
+function getQueryValue(name) {
+var value = "";
+if ( (i=location.search.indexOf('?'+name))==-1 &&
+(i=location.search.indexOf('&'+name,3))==-1 )
+return null;
+else
+i += name.length+2;
+if ( (j=location.search.indexOf("&",i))!=-1 )
+value = location.search.substring(i,j);
+else
+value = location.search.substring(i,location.search.length);
+for ( i=0; i<value.length; i++ )
+if ( value.charAt(i)=='+' )
+value = value.substring(0,i)+' '+value.substring(i+1,value.length);
+return unescape(value);
+}
+function isnav() {
+	if(window.navigator.appName.indexOf('Microsoft') == -1) {
+		return true;
+	}
+	return false;
+}
+		function ration(img) {
+			a=img.height/img.width
+			return a
+		}
+		function reload() {
+			location.reload();
+		}
+		function fnReadyState() {
+			if(top.circleRatio.readyState=="complete") {
+				resizebodystep2()
+			}
+		}
+		function resizebody() {
+			if(top.circleRatio==0) {
+				top.circleRatio=top.BBPreload(top.circleSrc);
+			}
+			if(top.circleRatio.readyState=="complete") {
+				resizebodystep2()
+			} else {
+			   top.circleRatio.onreadystatechange=fnReadyState
+			}
+		}
+		function resizebodystep2() {
+			var posTop;
+			document.getElementById('zPicture').src=top.circleRatio.src
+			var zWidth=document.body.clientWidth-48
+			var zHeight=zWidth*ration(top.circleRatio)
+			if(zHeight<document.body.clientHeight-45) {
+				posTop=((document.body.clientHeight-45-zHeight)/2)+5
+			} else {
+				zHeight=document.body.clientHeight-45
+				zWidth=zHeight/ration(top.circleRatio)
+				posTop=((document.body.clientHeight-45-zHeight)/2)+5;
+			}
+			document.getElementById('zPicture').width=zWidth
+			document.getElementById('zPicture').height=zHeight
+			document.getElementById('zPicture').style.posTop=
+				((document.body.clientHeight-35)/2) - (document.getElementById('zPicture').clientHeight)/2			
+			document.getElementById('zPicture').style.posLeft=((document.body.clientWidth-20)/2) - (document.getElementById('zPicture').clientWidth)/2 + 8
+			var zTop=document.getElementById('zPicture').offsetTop+zHeight+2+20
+			document.getElementById('titles').style.posTop=zTop
+			var zLeft=((document.body.clientWidth)/2) - (document.getElementById('titles').clientWidth)/2
+			document.getElementById('titles').style.posLeft=zLeft
+			if(!isnav() && top.circle=='n') {
+				zPicture.style.visibility="hidden"
+				if(getQueryValue("return")!='y') {
+					zPicture.filters[0].Apply();  
+					zPicture.style.visibility="visible"
+					zPicture.filters[0].play();
+					try {
+						top.circle='y';
+					} catch (e) {}
+				} else {
+					zPicture.style.visibility="visible";
+				}
+			} else {
+				zPicture.style.visibility="visible";
+			}
+			document.getElementById("titles").style.visibility="visible";
+		}
+			zPicture.style.visibility="hidden"
+			resizebody();
+			if(isnav()) {
+				window.captureEvents(Event.RESIZE);
+			} 
+			window.onresize=reload;
+			try {
+				if(top.thepaths==0) {
+					top.thepathsRatio=top.BBPreload(top.thepathsSrc);
+					top.tunneltofreedomRatio=top.BBPreload(top.tunneltofreedomSrc);
+				}
+			} catch (e) {}
+	</script>
+</html>

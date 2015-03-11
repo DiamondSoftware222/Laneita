@@ -1,0 +1,69 @@
+#zPicture {
+VISIBILITY: hidden; POSITION: absolute;
+		filter:progid:DXImageTransform.Microsoft.fade(duration=2);
+		}
+body 
+{
+	color:cornflowerblue;
+	BACKGROUND-COLOR: aliceblue;
+}
+#zpicture { POSITION: absolute; }
+a {color:cornflowerblue;}
+#bodyarea 
+{
+	COLOR: cornflowerblue; 
+}
+.mainmenuitem
+{	
+	width: 100%;
+	height: 100px;
+	background-color: aliceblue;
+}
+#bars 
+{
+	width:18px;
+	float:left;
+	height: 100%;
+	margin-right:-3px;
+	background-color: aliceblue;
+}
+.submenuitem1 a:hover
+{
+	background-color:#d7e5ef;
+	color:#3572a4;
+	width:92%;
+}
+
+.submenuitem1 a 
+{
+	background-color:#3572a4;
+	color:#9fc2e0;
+	width:92%;
+}
+.submenuitem2 a
+{
+	background-color:#d7e5ef;
+	color:#3572a4;
+	width:92%;
+}
+
+.submenuitem2 a:hover 
+{
+	background-color:#3572a4;
+	color:#9fc2e0;
+	width:92%;
+}
+.submenuitem3 a:hover
+{
+	background-color:#e1eced;
+	color:#2f6a71;
+	width:92%;
+}
+
+.submenuitem3 a
+{
+	background-color:rgb(48,100,122);
+	color:rgb(171,207,222);
+	width:92%;
+}
+

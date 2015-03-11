@@ -1,0 +1,101 @@
+body 
+{
+/* painting background */
+	BACKGROUND-COLOR: rgb(253,252,251); 
+	color: rgb(160,116,51); /* rgb(206,214,217);*/ /*#ced6d9;*/
+	
+}
+
+/* Left-side Menus */
+
+#mmi3 {
+	BACKGROUND-IMAGE: url(images/buttons/ContactMeRedish.bmp); 
+	BACKGROUND-COLOR: rgb(232,192,132); 
+	BACKGROUND-POSITION: center center; 
+	BACKGROUND-REPEAT: no-repeat; 
+}
+#mmi4 {
+	BACKGROUND-IMAGE: url(images/buttons/HomeRedish.bmp); 
+	BACKGROUND-COLOR: rgb(250,228,192); 
+	BACKGROUND-POSITION: center center; 
+	BACKGROUND-REPEAT: no-repeat; 
+}
+
+
+#zpicture 
+{
+	VISIBILITY: hidden; POSITION: absolute;
+		filter:progid:DXImageTransform.Microsoft.RadialWipe(duration=2,wipeStyle=clock);
+}
+/* right and left arrows color =================== */
+a {
+	COLOR: rgb(187,78,87); 	
+}
+
+/* footer title color =============================*/
+#bodyarea 
+{
+	COLOR: rgb(187,78,87); 
+}
+
+.mainmenuitem
+{	
+	width: 100%;
+	height: 100px;
+	background-color: rgb(242,255,255);
+}
+#bars 
+{
+	width:18px;
+	float:left; 
+	height: 100%;
+	margin-right:-3px;
+	background-color: rgb(242,255,255);
+}
+
+/* top pop-out bar ======================================= */
+
+.submenuitem1 a:hover
+{
+	/* hover background of pop-out letters .. just letters */
+	background-color:#fbedd7; /*rgb(66,80,85);*/ /*#425055;*/
+	/* hover color of pop-out letters */
+	color: #9c670e; /*rgb(143,162,167);*/ /*#8fa2a7;*/
+	width:92%;
+}
+
+.submenuitem1 a 
+{
+	/* background of the pop-out letters ... just letters */
+	background-color: rgb(140,96,31); 
+	/* pop-out letters */
+	color: #fbedd7; /*rgb(66,80,85);*/ /*#425055;*/
+	width:92%;
+}
+.submenuitem2 a
+{
+	background-color:#b8883d;
+	color:#603000;
+	width:92%;
+}
+
+.submenuitem2 a:hover 
+{
+	background-color:#603000;
+	color:#b8883d;
+	width:92%;
+}
+.submenuitem3 a:hover
+{
+	background-color:#4b7b81;
+	color:#bcd5d8;
+	width:92%;
+}
+
+.submenuitem3 a
+{
+	background-color:#f2f7f2;
+	color:#4b7b81;
+	width:92%;
+}
+

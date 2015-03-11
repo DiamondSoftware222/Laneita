@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title></title>
+		<meta name="GENERATOR" content="Microsoft Visual Studio.NET 7.0">
+		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+		<style>
+		body {margin-right:5px;
+				margin-left:5px;
+				margin-top:5px;
+				margin-bottom:20;
+			color:cornflowerblue
+		}
+		img {
+		border-top: cornflowerblue 10px ridge;
+	border-right: cornflowerblue 10px ridge;
+	border-left: cornflowerblue 10px ridge;
+	border-bottom: cornflowerblue 10px ridge;}
+}
+	a {color:cornflowerblue; text-decoration:none;}
+
+		</style>
+	</head>
+	<body id="bodyai" style="FONT-SIZE: 12px;COLOR: cornflowerblue; FONT-FAMILY: Georgia, 'Lucida Sans Unicode'; LETTER-SPACING: 4px; BACKGROUND-COLOR: aliceblue">
+		<img id="zPicture" style="FONT-SIZE: 12px; VISIBILITY: hidden;  POSITION: absolute;
+		filter:progid:DXImageTransform.Microsoft.Blinds(direction='down');" alt="Majesty">
+		<p align="center" id="titles" style="visibility: hidden; DISPLAY: inline; POSITION: absolute">
+			<a href="Pilgrims.htm">&lt;&nbsp;&nbsp;&nbsp;&nbsp;</a><span id="realtitle">Majesty</span><a href="Ascending.htm">&nbsp;&nbsp;&nbsp;&nbsp;&gt;</a>
+		</p>
+	</body>
+	<script language="javascript">
+function getQueryValue(name) {
+var value = "";
+if ( (i=location.search.indexOf('?'+name))==-1 &&
+(i=location.search.indexOf('&'+name,3))==-1 )
+return null;
+else
+i += name.length+2;
+if ( (j=location.search.indexOf("&",i))!=-1 )
+value = location.search.substring(i,j);
+else
+value = location.search.substring(i,location.search.length);
+for ( i=0; i<value.length; i++ )
+if ( value.charAt(i)=='+' )
+value = value.substring(0,i)+' '+value.substring(i+1,value.length);
+return unescape(value);
+}
+function isnav() {
+	if(window.navigator.appName.indexOf('Microsoft') == -1) {
+		return true;
+	}
+	return false;
+}
+		function ration(img) {
+			a=img.height/img.width
+			return a
+		}
+		function reload() {
+			location.reload();
+		}
+		function fnReadyState() {
+			if(top.majestyRatio.readyState=="complete") {
+				resizebodystep2()
+			}
+		}
+		function resizebody() {
+			if(top.majestyRatio==0) {
+				top.majestyRatio=top.BBPreload(top.majestySrc);
+			}
+			if(top.majestyRatio.readyState=="complete") {
+				resizebodystep2()
+			} else {
+			   top.majestyRatio.onreadystatechange=fnReadyState
+			}
+		}
+		function resizebodystep2() {
+			var posTop;
+			document.getElementById('zPicture').src=top.majestyRatio.src
+			var zWidth=document.body.clientWidth-30
+			var zHeight=zWidth*ration(top.majestyRatio)
+			if(zHeight<document.body.clientHeight-45) {
+				posTop=((document.body.clientHeight-45-zHeight)/2)+5
+			} else {
+				zHeight=document.body.clientHeight-45
+				zWidth=zHeight/ration(top.majestyRatio)
+				posTop=((document.body.clientHeight-45-zHeight)/2)+5;
+			}
+			document.getElementById('zPicture').width=zWidth
+			document.getElementById('zPicture').height=zHeight
+			document.getElementById('zPicture').style.posTop=
+				((document.body.clientHeight-35)/2) - (document.getElementById('zPicture').clientHeight)/2			
+			document.getElementById('zPicture').style.posLeft=((document.body.clientWidth-20)/2) - (document.getElementById('zPicture').clientWidth)/2
+			var zTop=document.getElementById('zPicture').offsetTop+zHeight+2+20
+			document.getElementById('titles').style.posTop=zTop
+			var zLeft=((document.body.clientWidth)/2) - (document.getElementById('titles').clientWidth)/2
+			document.getElementById('titles').style.posLeft=zLeft
+			if(!isnav() && top.majesty=='n') {
+				zPicture.style.visibility="hidden"
+				if(getQueryValue("return")!='y') {
+					zPicture.filters[0].Apply();  
+					zPicture.style.visibility="visible"
+					zPicture.filters[0].play();
+					try {
+						top.majesty='y';
+					} catch (e) {}
+				} else {
+					zPicture.style.visibility="visible";
+				}
+			} else {
+				zPicture.style.visibility="visible";
+			}
+			document.getElementById("titles").style.visibility="visible";
+		}
+			zPicture.style.visibility="hidden"
+			resizebody();
+			if(isnav()) {
+				window.captureEvents(Event.RESIZE);
+			} 
+			window.onresize=reload;
+			try {
+				if(top.pilgrimsRatio==0) {
+					top.pilgrimsRatio=top.BBPreload(top.pilgrimsSrc);
+				}
+				if(top.ascendingRatio==0) {
+					top.ascendingRatio=top.BBPreload(top.ascendingSrc);
+				}
+			} catch (e) {}
+	</script>
+</html>

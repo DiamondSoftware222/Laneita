@@ -1,0 +1,26 @@
+	<script language=javascript>
+function isnav() {
+	if(window.navigator.appName.indexOf('Microsoft') == -1) {
+		return true;
+	}
+	return false;
+}
+		function resized() {
+			resizebody();
+		}
+		function resizebody() {
+			document.getElementById('sysbody').style.height=document.body.clientHeight-10;
+			try {
+				document.getElementById('sysmenu').style.height=document.body.clientHeight-10;
+			} catch (e) {}
+			try {
+				document.getElementById('sysmenu2bars').style.height=document.body.clientHeight-10;
+				document.getElementById('sysmenu2menuitems').style.height=document.body.clientHeight-10;
+			} catch (e) {}
+		}
+			resizebody();
+			if(isnav()) {
+				window.captureEvents(Event.RESIZE);
+			} 
+			window.onresize=resized;
+		</script>

@@ -1,0 +1,69 @@
+body 
+{
+	color:rgb(64,131,242);
+	BACKGROUND-COLOR: rgb(242,255,255);
+}
+#zpicture 
+{
+	VISIBILITY: hidden; POSITION: absolute;
+		filter:progid:DXImageTransform.Microsoft.RadialWipe(duration=2,wipeStyle=clock);
+}
+a {color:rgb(64,131,242);}
+#bodyarea 
+{
+	COLOR: rgb(64,131,242); 
+}
+.mainmenuitem
+{	
+	width: 100%;
+	height: 100px;
+	background-color: rgb(242,255,255);
+}
+#bars 
+{
+	width:18px;
+	float:left;
+	height: 100%;
+	margin-right:-3px;
+	background-color: rgb(242,255,255);
+}
+.submenuitem1 a:hover
+{
+	background-color: rgb(66,80,85);
+	color:rgb(143,162,167); /*#8fa2a7;*
+	width:92%;
+}
+
+.submenuitem1 a 
+{
+	background-color:rgb(206,214,217);
+	color:rgb(66,80,85); /*#425055;*/
+	width:92%;
+}
+.submenuitem2 a
+{
+	background-color:rgb(67,111,116); /*#436f74;*/
+	color:rgb(157,194,198); /*#9dc2c6;*/
+	width:92%;
+}
+
+.submenuitem2 a:hover 
+{
+	background-color:rgb(225,239,226); /*#e1efe2;*/
+	color:rgb(67,111,116); /*#436f74;*/
+	width:92%;
+}
+.submenuitem3 a:hover
+{
+	background-color:rgb(75,123,129); /*#4b7b81;*/
+	color:rgb(188,213,216); /*#bcd5d8;*/
+	width:92%;
+}
+
+.submenuitem3 a
+{
+	background-color:rgb(242,247,242); /*#f2f7f2;*/
+	color:rgb(75,183,129); /*#4b7b81;*/
+	width:92%;
+}
+

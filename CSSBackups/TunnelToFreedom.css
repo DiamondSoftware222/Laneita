@@ -1,0 +1,65 @@
+body 
+{
+	color:#779;
+	BACKGROUND-COLOR: #e5f0ff;
+}
+#zpicture { border-top: #d5c9e5 10px ridge;
+	border-right: #d5c9e5 10px ridge;
+	border-left: #d5c9e5 10px ridge;
+	border-bottom: #d5c9e5 10px ridge;
+VISIBILITY: hidden; POSITION: absolute;
+filter:progid:DXImageTransform.Microsoft.Zigzag(duration=3,GridSizeX=20,GridSizeY=14);
+}
+a {color:#779;}
+#bodyarea 
+{
+	COLOR: #779; 
+}
+.mainmenuitem
+{	
+	width: 100%;
+	height: 100px;
+	background-color: #e5f0ff;
+}
+#bars 
+{
+	width:18px;
+	float:left;
+	height: 100%;
+	margin-right:-3px;
+	background-color: #e5f0ff;
+}
+.submenuitem1 a:hover
+{
+	background-color:#d7e5ef;
+	color:#3572a4;
+}
+
+.submenuitem1 a 
+{
+	background-color:#1e4384;
+	color:#b9cfff;
+}
+.submenuitem2 a
+{
+	background-color:#b9cfff;
+	color:#1e4384;
+}
+
+.submenuitem2 a:hover 
+{
+	background-color:#1e4384;
+	color:#9fc2e0;
+}
+.submenuitem3 a:hover
+{
+	background-color:#d7e5ef;
+	color:#3572a4;
+}
+
+.submenuitem3 a
+{
+	background-color:#1e4384;
+	color:#b9cfff;
+}
+

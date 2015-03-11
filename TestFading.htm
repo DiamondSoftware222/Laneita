@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title></title>
+		<meta name="GENERATOR" content="Microsoft Visual Studio.NET 7.0">
+		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+	</head>
+	<body>
+	<SCRIPT>
+var bToggle = 0;
+function fnToggle() {
+    oDiv.filters[0].Apply();                   
+// After setting Apply, changes to the oDiv object 
+//  are not displayed until Play is called.
+
+    if (bToggle) {                                                        
+        bToggle = 0;
+        oDiv.style.backgroundColor="gold";}
+    else {
+        bToggle = 1;
+        oDiv.style.backgroundColor="blue";}  
+    oDiv.filters[0].Play();
+}
+</SCRIPT>
+
+<BUTTON onclick="fnToggle()" ID="Button1">Toggle Transition</BUTTON><BR/><BR/>
+<DIV ID="oDiv" STYLE="height:250px; width:250px; background-color: gold;
+                filter:progid:DXImageTransform.Microsoft.Fade( 
+                duration=2);">
+</DIV>
+	</body>
+</html>

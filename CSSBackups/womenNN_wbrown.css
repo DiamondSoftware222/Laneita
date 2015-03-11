@@ -1,0 +1,66 @@
+#zPicture 
+{
+VISIBILITY: hidden; POSITION: absolute;
+		filter:progid:DXImageTransform.Microsoft.Iris(IrisStyle='square', Motion=out, duration=2);
+}
+body 
+{
+	color:tan;
+	BACKGROUND-COLOR: #fcf1de;
+}
+a {color:tan;}
+#bodyarea 
+{
+	COLOR: tan; 
+}
+.mainmenuitem
+{	
+	width: 100%;
+	height: 100px;
+	background-color: #fcf1de;
+}
+#bars 
+{
+	width:18px;
+	float:left;
+	height: 100%;
+	margin-right:-3px;
+	background-color: #fcf1de;
+}
+
+.submenuitem1 a 
+{
+	background-color:#805006;
+	color:#fbedd7;
+	width:92%;
+}
+.submenuitem1 a:hover
+{
+	background-color:#fbedd7;
+	color:#9c670e;
+	width:92%;
+}
+.submenuitem2 a
+{
+	background-color:#b8883d;
+	color:#603000;
+	width:92%;
+}
+
+.submenuitem2 a:hover 
+{
+	background-color:#603000;
+	color:#b8883d;
+	width:92%;
+}
+
+.submenuitem3 a
+{
+	background-color:#906016;
+	color:#fbedd7;
+}
+.submenuitem3 a:hover
+{
+	background-color:#fbedd7;
+	color:#9c670e;
+}

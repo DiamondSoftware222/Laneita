@@ -1,0 +1,74 @@
+body 
+{
+	color:rgb(64,131,242);
+	BACKGROUND-COLOR: rgb(242,255,255);
+}
+#zpicture
+{
+	border-right: #ffffcc 10px ridge;
+	border-top: #ffffcc 10px ridge;
+	filter: progid:DXImageTransform.Microsoft.RadialWipe(duration=2,wipeStyle=radial);
+	visibility: hidden;
+	border-left: #ffffcc 10px ridge;
+	border-bottom: #ffffcc 10px ridge;
+	position: absolute;
+}
+a {color:rgb(64,131,242);}
+#bodyarea 
+{
+	COLOR: rgb(64,131,242); 
+}
+.mainmenuitem
+{	
+	width: 100%;
+	height: 100px;
+	background-color: rgb(242,255,255);
+}
+#bars 
+{
+	width:18px;
+	float:left;
+	height: 100%;
+	margin-right:-3px;
+	background-color: rgb(242,255,255);
+}
+.submenuitem1 a:hover
+{
+	background-color:#425055;
+	color:#8fa2a7;
+	width:92%;
+}
+
+.submenuitem1 a 
+{
+	background-color:#ced6d9;
+	color:#425055;
+	width:92%;
+}
+.submenuitem2 a
+{
+	background-color:#436f74;
+	color:#9dc2c6;
+	width:92%;
+}
+
+.submenuitem2 a:hover 
+{
+	background-color:#e1efe2;
+	color:#436f74;
+	width:92%;
+}
+.submenuitem3 a:hover
+{
+	background-color:#4b7b81;
+	color:#bcd5d8;
+	width:92%;
+}
+
+.submenuitem3 a
+{
+	background-color:#f2f7f2;
+	color:4b7b81;
+	width:92%;
+}
+

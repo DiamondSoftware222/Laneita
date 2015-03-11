@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title></title>
+		<meta name="GENERATOR" content="Microsoft Visual Studio.NET 7.0">
+		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+		<style>
+		body {margin-right:5px;
+				margin-left:5px;
+				margin-top:5px;
+				margin-bottom:20;
+			color:cornflowerblue
+		}
+		img {
+		border-top: lightcyan 10px ridge;
+	border-right: lightcyan 10px ridge;
+	border-left: lightcyan 10px ridge;
+	border-bottom: lightcyan 10px ridge;}
+}
+	a {color:cornflowerblue; text-decoration:none;}
+
+		</style>
+	</head>
+	<body style="FONT-SIZE: 12px; COLOR: cornflowerblue; FONT-FAMILY: Georgia, 'Lucida Sans Unicode'; LETTER-SPACING: 4px; BACKGROUND-COLOR: aliceblue">
+		<img style="VISIBILITY: hidden; POSITION: absolute;
+		filter:progid:DXImageTransform.Microsoft.RadialWipe(duration=2,wipeStyle=radial);" id="zPicture" alt="The Paths">
+		<p align="center" id="titles" style="visibility: hidden; DISPLAY: inline; POSITION: absolute">
+			<a href="vortex.htm">&lt;&nbsp;&nbsp;&nbsp;&nbsp;</a><span id="realtitle">The Paths</span><a href="circle.htm">&nbsp;&nbsp;&nbsp;&nbsp;&gt;</a>
+		</p>
+	</body>
+	<script language="javascript">
+	function getQueryValue(name) {
+var value = "";
+if ( (i=location.search.indexOf('?'+name))==-1 &&
+(i=location.search.indexOf('&'+name,3))==-1 )
+return null;
+else
+i += name.length+2;
+if ( (j=location.search.indexOf("&",i))!=-1 )
+value = location.search.substring(i,j);
+else
+value = location.search.substring(i,location.search.length);
+for ( i=0; i<value.length; i++ )
+if ( value.charAt(i)=='+' )
+value = value.substring(0,i)+' '+value.substring(i+1,value.length);
+return unescape(value);
+}
+		function ration(img) {
+			a=img.height/img.width
+			return a
+		}
+function isnav() {
+	if(window.navigator.appName.indexOf('Microsoft') == -1) {
+		return true;
+	}
+	return false;
+}
+		function reload() {
+			location.reload();
+		}
+		function fnReadyState() {
+			if(top.thepathsRatio.readyState=="complete") {
+				resizebodystep2()
+			}
+		}
+		function resizebody() {
+			if(top.thepathsRatio==0) {
+				top.thepathsRatio=top.BBPreload(top.thepathsSrc);
+			}
+			if(top.thepathsRatio.readyState=="complete") {
+				resizebodystep2()
+			} else {
+			   top.thepathsRatio.onreadystatechange=fnReadyState
+			}
+		}
+		function resizebodystep2() {
+			var posTop;
+			document.getElementById('zPicture').src=top.thepathsRatio.src
+			var zWidth=document.body.clientWidth-30
+			var zHeight=zWidth*ration(top.thepathsRatio)
+			if(zHeight<document.body.clientHeight-45) {
+				posTop=((document.body.clientHeight-45-zHeight)/2)+5
+			} else {
+				zHeight=document.body.clientHeight-45
+				zWidth=zHeight/ration(top.thepathsRatio)
+				posTop=((document.body.clientHeight-45-zHeight)/2)+5;
+			}
+			document.getElementById('zPicture').width=zWidth
+			document.getElementById('zPicture').height=zHeight
+			document.getElementById('zPicture').style.posTop=
+				((document.body.clientHeight-35)/2) - (document.getElementById('zPicture').clientHeight)/2			
+			document.getElementById('zPicture').style.posLeft=((document.body.clientWidth-20)/2) - (document.getElementById('zPicture').clientWidth)/2
+			var zTop=document.getElementById('zPicture').offsetTop+zHeight+2+20
+			document.getElementById('titles').style.posTop=zTop
+			var zLeft=((document.body.clientWidth)/2) - (document.getElementById('titles').clientWidth)/2
+			document.getElementById('titles').style.posLeft=zLeft
+			if(!isnav() && top.thepaths=='n') {
+				zPicture.style.visibility="hidden"
+				if(getQueryValue("return")!='y') {
+					zPicture.filters[0].Apply();  
+					zPicture.style.visibility="visible"
+					zPicture.filters[0].play();
+					try {
+						top.thepaths='y';
+					} catch (e) {}
+				} else {
+					zPicture.style.visibility="visible";
+				}
+			} else {
+				zPicture.style.visibility="visible";
+			}
+			document.getElementById("titles").style.visibility="visible";
+		}
+			zPicture.style.visibility="hidden"
+			resizebody();
+			if(isnav()) {
+				window.captureEvents(Event.RESIZE);
+			} 
+			window.onresize=reload;
+			try {
+				if(top.vortexRatio==0) {
+					top.vortexRatio=top.BBPreload(top.vortexSrc);
+				}
+				if(top.circleRatio==0) {
+					top.circleRatio=top.BBPreload(top.circleSrc);
+				}
+			} catch (e) {}
+	</script>
+</html>

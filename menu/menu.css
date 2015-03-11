@@ -1,0 +1,65 @@
+#sysmenu2bars 
+{
+	width:18px;
+	float:left;
+	position:relative;
+}
+#sysmenu2menuitems
+{
+	width:154px;
+	float:left;
+	position: relative;
+	z-index: 5;
+	visibility:hidden;
+	filter: progid:DXImageTransform.Microsoft.Blinds(direction=left, bands=1, duration=.25)
+			progid:DXImageTransform.Microsoft.Blinds(direction=right, bands=1, duration=.25)
+			progid:DXImageTransform.Microsoft.Alpha(opacity=65);
+}
+#sysmenu
+{
+	width:18px;
+	float: left;
+	filter: progid:DXImageTransform.Microsoft.Blinds(direction=left, bands=1, duration=.6)
+			progid:DXImageTransform.Microsoft.Blinds(direction=right, bands=1, duration=.3);
+}
+#expanded 
+{
+	width: 100%;
+	height: 100%;
+	margin-left:-3px;
+}
+#wholemagilla 
+{
+	background-color: ivory;
+}
+#sysbody
+{
+	width: 100%;
+	margin-left: -10px;
+	padding-left: -10px;
+}
+#sysmenu2menuitems a 
+{
+	text-decoration:none;
+	margin-left:5px;
+	margin-right:5px;
+	width:92%
+}
+
+.mmxsm 
+{
+	visibility:hidden;
+	position:relative;
+}
+.submenuitem 
+{
+	margin-bottom:4px;
+	margin-top:4px;
+}
+
+.submenuitem1 
+{
+	padding-bottom:1px;
+}
+
+

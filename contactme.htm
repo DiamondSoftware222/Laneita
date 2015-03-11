@@ -1,0 +1,179 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	<HEAD>
+		<TITLE>Lanetia's Paintings -- Contact Page</TITLE>
+		<META content="Microsoft Visual Studio 7.0" name="GENERATOR">
+		<style type="text/css" media="screen"> 
+	.footer_links { font-size: 18px; }
+	#heading { width:100%;font-family: 'Times New Roman' , Serif; text-align: center; color: #006699; letter-spacing: 6pt; }
+
+	a { font-family: Verdana, Sans-Serif; }
+	a:link { color: #eeeef0; }
+	a:visited { color: #eeeef0; }
+	a:active { color: #cceef0; }
+	a:hover { color: #cceef0; }
+	#themiddlediv {
+		width:723px; height:425px;;
+	}
+	hr { color: #006699; margin-top: -10px; }
+	body{ overflow:hidden;}
+	#maintext { padding: 28px; padding-right: 58px; color: #336699; line-height: 20px; font-family: Verdana, Sans-Serif; text-indent: 3em; height: 800px; overflow: auto; /*border: solid 1px #069;*/ margin-left: 20px; margin-right: -7px; }
+	#photo { border-top: rgb(186,235,254) 4px ridge; border-right: rgb(186,235,254) 4px ridge; border-left: rgb(186,235,254) 4px ridge; border-bottom: rgb(186,235,254) 4px ridge; float: left; margin-right:10px; margin-below:10px}
+	</style>
+	</HEAD>
+	<BODY>
+		<img id="zPicture" style="position:absolute; left:0; top:0;z-index:1" src="images/laneitaspaintings/majestyforcontactpage.jpg">
+		<div style="z-index:2;position:absolute;">
+			<div id="heading">
+				<h1>Laneita's Paintings<BR>
+					<span style="FONT-SIZE: 12pt">Contact Information</span>
+				</h1>
+				<hr>
+			</div>
+			<div style="FONT-SIZE:18pt; TEXT-ALIGN:center">&nbsp;
+			</div>
+			<div align="center">
+				<div id="themiddlediv">
+					<DIV style="FONT-SIZE: 18pt; TEXT-ALIGN: center">&nbsp;</DIV>
+					<DIV style="FONT-SIZE: 18pt; TEXT-ALIGN: center">
+						Phone number: (303) 775-9068
+						<br>
+						Email: <A href="mailto:coxlaneita222@gmail.com">coxlaneita222@gmail.com</A>
+					</DIV>
+					<p class="footer_links" align="center">&nbsp;</p>
+					<P class="footer_links" align="center">&nbsp;</P>
+					<P class="footer_links" align="center">&nbsp;</P>
+					<P class="footer_links" align="center"><A href="ThePaintings.htm">Enter the gallery</A>&nbsp;&nbsp;&nbsp;&nbsp;
+						<A href="home.htm">Home</A>
+					</P>
+				</div>
+			</div>
+		</div>
+		<script language="javascript">
+			function isnav() {
+				if(window.navigator.appName.indexOf('Microsoft') == -1) {
+					return true;
+				}
+				return false;
+			}
+			function iscomplete(guy) {
+				var iscomplete2=false;
+				if(isnav()) {
+					return guy.width!=0;
+				} else {
+					if(guy.readyState=="complete") {
+						iscomplete2=true;
+					}
+				}
+				return iscomplete2;
+			}
+			function fnReadyState() {
+				if(iscomplete(document.getElementById('zPicture'))) {
+					resizebodystep2()
+				} else {
+					if(isnav()) {
+						window.setTimeout("fnReadyState()",550)		
+					}
+				}
+			}
+			function realClientWidth1() {
+				if(isnav()) {
+					return document.body.clientWidth+22;
+				} else {
+					return document.body.clientWidth;
+				}
+			}
+			function ration(img) {
+				za=img.height/img.width
+				return za;
+			}
+			function getbodyheight() {
+				return document.body.clientHeight;
+			}
+			function resizebody() {
+				if(!iscomplete(document.getElementById('zPicture'))) {
+					if(isnav()) {
+						window.setTimeout("fnReadyState()",300)
+					} else {
+						document.getElementById('zPicture').onreadystatechange=fnReadyState
+					}
+				} else {
+					resizebodystep2();
+				}
+			}
+			var zImgWidth;
+			var zImgHeight;
+			var ration;
+			function realClientHeight() {
+				if(isnav()) {
+					return window.innerHeight;
+				} else {
+					return document.body.clientHeight;
+				}
+			}
+			function resizebodystep2() {
+				var posTop;
+				var zScreenWidth=realClientWidth1()
+				var zScreenHeight=realClientHeight();
+				zImgWidth=document.getElementById('zPicture').width;
+				zImgHeight=document.getElementById('zPicture').height;
+				ration=zImgHeight/zImgWidth;
+				zDiffBetweenImgWidthAndScreenWidth=zImgWidth-zScreenWidth;
+				zDiffBetweenImgHeightAndScreenHeight=zImgHeight-zScreenHeight;
+/*				alert(zImgWidth+" "+zImgHeight+" "+zScreenWidth+" "+zScreenHeight)  */
+				if(zDiffBetweenImgWidthAndScreenWidth>0 && zDiffBetweenImgHeightAndScreenHeight>0) {
+					if(zDiffBetweenImgWidthAndScreenWidth>zDiffBetweenImgHeightAndScreenHeight) {
+						zImgHeight=zScreenHeight;
+						zImgWidth=zImgHeight/ration;
+/*						while(zImgHeight>zScreenHeight) {
+							zImgHeight--;
+							zImgWidth=zImgHeight/ration;
+						}*/
+					} else {
+						zImgWidth=zScreenWidth;
+						zImgHeight=zImgWidth*ration;
+/*						while(zImgWidth>zScreenWidth) }
+							zImgWidth--;
+							zImgHeight=zImgWidth*ration;
+						}*/
+					}
+				} else {
+					if(zDiffBetweenImgWidthAndScreenWidth<=0 && zDiffBetweenImgHeightAndScreenHeight<=0) {
+						if(zDiffBetweenImgWidthAndScreenWidth>zDiffBetweenImgHeightAndScreenHeight) {
+							zImgHeight=zScreenHeight;
+							zImgWidth=zImgHeight/ration;
+/*							while(zImgHeight<zScreenHeight) {
+								zImgHeight++;
+								zImgWidth=zImgHeight/ration;
+							}*/
+						} else {
+							zImgWidth=zScreenWidth;
+							zImgHeight=zImgWidth*ration;
+/*							while(zImgWidth<zScreenWidth) {
+								zImgWidth++;
+								zImgHeight=zImgWidth*ration;
+							}*/
+						}
+					} else {
+						if(zDiffBetweenImgWidthAndScreenWidth>0) {
+							zImgHeight=zScreenHeight;
+							zImgWidth=zImgHeight/ration;
+						} else {
+							zImgWidth=zScreenWidth;
+							zImgHeight=zImgWidth*ration;
+						}
+					}
+				}
+				document.getElementById('zPicture').width=zImgWidth
+				document.getElementById('zPicture').height=zImgHeight
+			}			
+			function reload() {
+				location.reload();
+			}
+			if (top.isNav) {window.captureEvents(Event.RESIZE);}
+			window.onresize=resizebody;
+			resizebody();
+document.body.style.overflow='hidden'
+		</script>
+	</BODY>
+</HTML>

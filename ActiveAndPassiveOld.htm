@@ -1,0 +1,131 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title></title>
+		<meta name="GENERATOR" content="Microsoft Visual Studio.NET 7.0">
+		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+		<style>
+		body {margin-right:5px;
+				margin-left:5px;
+				margin-top:5px;
+				margin-bottom:20;
+			color:cornflowerblue
+		}
+		img {
+		border-top: wheat 10px ridge;
+	border-right: wheat 10px ridge;
+	border-left: wheat 10px ridge;
+	border-bottom: wheat 10px ridge;}
+}
+	a {color:cornflowerblue; text-decoration:none;}
+
+		</style>
+	</head>
+	<body style="FONT-SIZE: 12px; FONT-FAMILY: Georgia, 'Lucida Sans Unicode'; LETTER-SPACING: 4px; BACKGROUND-COLOR: aliceblue">
+		<img style="VISIBILITY: hidden; POSITION: absolute;
+		filter:progid:DXImageTransform.Microsoft.Stretch(duration=2,StretchStyle=push);" id="zPicture" alt="Active and Passive">
+		<p align="center" id="titles" style="visibility: hidden; DISPLAY: inline; POSITION: absolute">
+			<a href="tunneltofreedom.htm">&lt;&nbsp;&nbsp;&nbsp;&nbsp;</a><span id="realtitle">Active 
+				and Passive</span><a href="DolphinEncounter.htm">&nbsp;&nbsp;&nbsp;&nbsp;&gt;</a>
+		</p>
+	</body>
+	<script language="javascript">
+		function getQueryValue(name) {
+var value = "";
+if ( (i=location.search.indexOf('?'+name))==-1 &&
+(i=location.search.indexOf('&'+name,3))==-1 )
+return null;
+else
+i += name.length+2;
+if ( (j=location.search.indexOf("&",i))!=-1 )
+value = location.search.substring(i,j);
+else
+value = location.search.substring(i,location.search.length);
+for ( i=0; i<value.length; i++ )
+if ( value.charAt(i)=='+' )
+value = value.substring(0,i)+' '+value.substring(i+1,value.length);
+return unescape(value);
+}
+
+function isnav() {
+	if(window.navigator.appName.indexOf('Microsoft') == -1) {
+		return true;
+	}
+	return false;
+}
+		function ration(img) {
+			a=img.height/img.width
+			return a
+		}
+		function reload() {
+			location.reload();
+		}
+		function fnReadyState() {
+			if(top.activeandpassiveRatio.readyState=="complete") {
+				resizebodystep2()
+			}
+		}
+		function resizebody() {
+			if(top.activeandpassiveRatio==0) {
+				top.activeandpassiveRatio=top.BBPreload(top.activeandpassiveSrc);
+			}
+			if(top.activeandpassiveRatio.readyState=="complete") {
+				resizebodystep2()
+			} else {
+			   top.activeandpassiveRatio.onreadystatechange=fnReadyState
+			}
+		}
+		function resizebodystep2() {
+			var posTop;
+			document.getElementById('zPicture').src=top.activeandpassiveRatio.src
+			var zWidth=document.body.clientWidth-30
+			var zHeight=zWidth*ration(top.activeandpassiveRatio)
+			if(zHeight<document.body.clientHeight-45) {
+				posTop=((document.body.clientHeight-45-zHeight)/2)+5
+			} else {
+				zHeight=document.body.clientHeight-45
+				zWidth=zHeight/ration(top.activeandpassiveRatio)
+				posTop=((document.body.clientHeight-45-zHeight)/2)+5;
+			}
+			document.getElementById('zPicture').width=zWidth
+			document.getElementById('zPicture').height=zHeight
+			document.getElementById('zPicture').style.posTop=
+				((document.body.clientHeight-35)/2) - (document.getElementById('zPicture').clientHeight)/2			
+			document.getElementById('zPicture').style.posLeft=((document.body.clientWidth-20)/2) - (document.getElementById('zPicture').clientWidth)/2
+			var zTop=document.getElementById('zPicture').offsetTop+zHeight+2+20
+			document.getElementById('titles').style.posTop=zTop
+			var zLeft=((document.body.clientWidth)/2) - (document.getElementById('titles').clientWidth)/2
+			document.getElementById('titles').style.posLeft=zLeft
+			if(!isnav() && top.activeandpassive=='n') {
+				zPicture.style.visibility="hidden"
+				if(getQueryValue("return")!='y') {
+					zPicture.filters[0].Apply();  
+					zPicture.style.visibility="visible"
+					zPicture.filters[0].play();
+					try {
+						top.activeandpassive='y';
+					} catch (e) {}
+				} else {
+					zPicture.style.visibility="visible";
+				}
+			} else {
+				zPicture.style.visibility="visible";
+			}
+			document.getElementById("titles").style.visibility="visible";
+		}
+			zPicture.style.visibility="hidden"
+			resizebody();
+			if(isnav()) {
+				window.captureEvents(Event.RESIZE);
+			} 
+			window.onresize=reload;
+		try {
+			if(top.tunneltofreedomRatio==0) {
+				top.tunneltofreedomRatio=top.BBPreload(top.tunneltofreedomSrc);
+			}
+			if(top.dolphinencounterRatio==0) {
+				top.dolphinencounterRatio=top.BBPreload(top.dolphinencounterSrc);
+			}
+		} catch (e) {}
+	</script>
+</html>
